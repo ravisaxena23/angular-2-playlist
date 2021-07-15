@@ -1,3 +1,18 @@
-<p> edAWs
-  directory works!
-</p>
+<h2>Ninja Listing</h2>
+<div id="filter">
+  <label>filter ninjas by name:</label>
+  <input [(ngModel)] = "term" />
+</div>
+
+
+<ul id ="ninja-listing">
+  <li *ngFor = "let ninja of ninjas | filter:term">
+    <div class = "single-ninja">
+      <!-- belt color -->
+       <span [ngStyle] = "{background:ninja.belt,color:'#fafafa'}">{{ninja.belt}} belt</span>
+       <!-- ninja name -->
+       <h3>{{ninja.name}}</h3>
+       <!-- <div (click) = "remove($event)" [attr.data-name] = "ninja.name"> delete</div> -->
+    </div>
+  </li>
+</ul>
