@@ -10,8 +10,6 @@ export class DataService {
     fetchData(){
       return this.http.get('app/ninjas.json').map(
         (res) => res.json()
-      ).subscribe(
-        (data)  => console.log(data)
-      )
+      );
     }
 }

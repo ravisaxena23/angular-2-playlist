@@ -18,7 +18,9 @@ export class DirectoryComponent implements OnInit {
   ninjas = [
   ];
   ngOnInit() {
-    this.dataService.fetchData();
+    this.dataService.fetchData().subscribe(
+      (data)  => this.ninjas = data
+    )
   }
 
 }
