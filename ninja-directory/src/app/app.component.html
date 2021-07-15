@@ -1,3 +1,16 @@
-<h1>
-  {{title}}
-</h1>
+<header>
+  <h1>
+    {{title}}
+  </h1>
+  <nav>
+    <ul>
+      <li><a href="/home">home</a></li>
+      <li><a href="/directory">directory</a></li>
+    </ul>
+  </nav>
+</header>
+<section id="main">
+  <!-- <app-home [ninja] = "ninja" (onYell)="yell($event)"></app-home> -->
+</section>
+<!-- <app-directory></app-directory> -->
+<router-outlet></router-outlet>
